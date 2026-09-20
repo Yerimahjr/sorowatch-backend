@@ -44,7 +44,7 @@ class FlagSubmissionClient:
                 network_passphrase=self.network_passphrase,
                 base_fee=100,
             )
-            .add_time_bounds(0, 0)
+            .set_timeout(30)
             .append_invoke_contract_function_op(
                 contract_id=self.contract_id,
                 function_name="flag_anomaly",
